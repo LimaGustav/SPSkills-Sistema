@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SPSkills
 {
-    public partial class Form1 : parent
+    public partial class LoginPage : parent
     {
-        public Form1()
+        public LoginPage()
         {
             InitializeComponent();
         }
