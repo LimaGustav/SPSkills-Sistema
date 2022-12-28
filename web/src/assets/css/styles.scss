@@ -1,0 +1,280 @@
+$white: #fff;
+$red: #EC1C24;
+$red2: #E30613;
+$black: #171717;
+
+$t1: 30px;
+$t2: 24px;
+$t3: 22px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    color: $white;
+}
+
+html, 
+body,
+#root,
+.full,
+.full2{
+    width: 100%;
+    height: 100%;
+}
+
+html,
+body,
+#root{
+    overflow: hidden;
+}
+
+h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+
+a, 
+a:hover{
+    color: $white;
+}
+
+input[type=text] {
+    width: 343px;
+    height: 40px;
+    background: linear-gradient(139.45deg, rgba(239, 239, 239, 0.6) 0%, rgba(217, 217, 217, 0.1) 100%);
+    backdrop-filter: blur(6px);
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 0 20px;
+    color: $white;
+    margin-bottom: 30px;
+}
+
+input[type=text]::placeholder{
+    color: $white
+}
+
+// #root, .full{
+//     width: 100vw;
+//     height: 100vh;
+//     max-height: 100vh;
+
+// }
+
+.header{
+    width: 100%;
+    height: 60px;
+    background-color: $red2;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.main{
+    width: 100%;
+    height: calc(100vh - 176px);
+}
+
+.footer{
+    width: 100%;
+    height: 120px;
+    background-color: $black;
+
+    .container{
+        height: 80%;
+    }
+
+    img{
+        max-height: 100%;
+    }
+}
+
+// .container{
+//     width: 90%;
+//     max-width: 1200px;
+// }
+
+.full,
+.full2{
+    overflow: auto;
+    background-size: cover;
+}
+.full{
+    box-shadow: inset 0 0 0 1000px rgba(0, 55, 100, .67);
+}
+
+.back1{
+    background-image: url('../img/backgrounds/worldskills-background.jpg');
+}
+.back2{
+    background-image: url('../img/backgrounds/worldskills-background2.jpg');
+}
+
+.logos{
+    width: 700px;
+    margin: 40px auto;
+}
+
+.g-card{
+    width: 45%;
+    height: 250px;
+    background: linear-gradient(139.45deg, rgba(239, 239, 239, 0.6) 0%, rgba(217, 217, 217, 0.1) 100%);
+    border-radius: 8px;
+    border: 1px solid white;
+    backdrop-filter: blur(4px);
+    display: flex;
+    padding: 10px;
+
+    img:first-of-type{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+    ._right{
+        text-align: right;
+    }
+
+    :nth-child(2){
+        flex-grow: 1;
+    }
+
+    h3, h4{
+        margin: 0;
+    }
+
+    h3, 
+    span{
+        font-size: 30px;
+    }
+    legend, 
+    h4{
+        font-size: 24px;
+    }
+    p{
+        font-size: 16px;
+    }
+}
+
+.gradient{
+    padding: 20px;
+    max-width: 750px;
+    height: 420px;
+    margin: 30px auto 0 auto;
+    border-radius: 8px;
+
+    background: linear-gradient(139.45deg, rgba(239, 239, 239, 0.6) 0%, rgba(217, 217, 217, 0.1) 100%);
+    backdrop-filter: blur(4px);
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    h1{
+        font-size: $t1;
+        font-weight: 900;
+        margin: 0 0 8px 0;
+    }
+    
+    h1,
+    button,
+    .button{
+        text-transform: uppercase;
+    }
+    
+    input, 
+    button,
+    .button{
+        width: 506px;
+        height: 40px;
+        border-radius: 5px;
+    }
+
+    label{
+        font-size: $t3;
+    }
+
+    input{
+        font-size: 14px;
+        background: linear-gradient(139.45deg, rgba(239, 239, 239, 0.6) 0%, rgba(217, 217, 217, 0.1) 100%);
+        padding: 0 20px;
+        border: 1px solid $white;
+    }
+
+    button,
+    .button{
+        font-size: 24px;
+        font-weight: 700;
+        background-color: $red;
+        margin-top: 20px;
+        border: 0;
+        position: absolute;
+        bottom: 85px;
+        text-align: center;
+        text-decoration: none;
+    }
+}
+
+*{
+    ::-webkit-scrollbar{
+        width: 5px;
+    }
+    ::-webkit-scrollbar-track{
+        background-color: transparent;
+    }
+    ::-webkit-scrollbar-thumb{
+        background: linear-gradient(139.45deg, rgba(239, 239, 239, 0.6) 0%, rgba(217, 217, 217, 0.1) 100%);
+        backdrop-filter: blur(4px);
+        border-radius: 20px;
+        border: 1px solid $white;
+    }
+}
+
+.lazyload{
+    margin: auto;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.lazyinner{
+    width: 99%;
+}
+
+.minput{
+    width: 506px;
+}
+.mminput{
+    width: 400px;
+}
+
+.erro{
+    position: absolute;
+    bottom: 58px
+}
+
+.mbottom{
+    position: absolute;
+    bottom: 30px
+}
+
+.gradient input::placeholder{
+    color: $white;
+}
+
+.labelleft{
+    display: flex;
+    flex-direction: column;
+}
+
+// bootstrap
+
+.nav-link{
+    color: $white
+}
