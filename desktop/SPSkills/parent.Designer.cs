@@ -47,6 +47,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "parent";
             this.Text = "parent";
+            this.Load += new System.EventHandler(this.parent_Load);
             this.ResumeLayout(false);
 
         }

@@ -19,7 +19,8 @@ namespace SPSkills
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            panel1.BackgroundImage = Image.FromFile($"{AppDomain.CurrentDomain.BaseDirectory}Assets/BackGround.png");
+            customPanel1.BackgroundColor = Color.FromArgb(100,0,0,0);
         }
     }
 }

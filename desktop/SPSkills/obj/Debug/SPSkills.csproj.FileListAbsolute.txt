@@ -9,4 +9,4 @@ C:\SistemaSkills\desktop\SPSkills\obj\Debug\SPSkills.csproj.GenerateResource.cac
 C:\SistemaSkills\desktop\SPSkills\obj\Debug\SPSkills.csproj.CoreCompileInputs.cache
 C:\SistemaSkills\desktop\SPSkills\obj\Debug\SPSkills.exe
 C:\SistemaSkills\desktop\SPSkills\obj\Debug\SPSkills.pdb
-C:\SistemaSkills\desktop\SPSkills\obj\Debug\SPSkills.Form1.resources
+C:\SistemaSkills\desktop\SPSkills\obj\Debug\SPSkills.LoginPage.resources
