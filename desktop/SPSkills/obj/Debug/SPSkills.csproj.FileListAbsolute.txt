@@ -10,3 +10,15 @@ C:\SistemaSkills\desktop\SPSkills\obj\Debug\SPSkills.csproj.CoreCompileInputs.ca
 C:\SistemaSkills\desktop\SPSkills\obj\Debug\SPSkills.exe
 C:\SistemaSkills\desktop\SPSkills\obj\Debug\SPSkills.pdb
 C:\SistemaSkills\desktop\SPSkills\obj\Debug\SPSkills.LoginPage.resources
+C:\Users\admin\Desktop\SPSkills\bin\Debug\SPSkills.exe.config
+C:\Users\admin\Desktop\SPSkills\bin\Debug\SPSkills.exe
+C:\Users\admin\Desktop\SPSkills\bin\Debug\SPSkills.pdb
+C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.csproj.SuggestedBindingRedirects.cache
+C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.LoginPage.resources
+C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.parent.resources
+C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.Properties.Resources.resources
+C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.exe
+C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.pdb

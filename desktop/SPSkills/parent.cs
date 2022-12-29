@@ -33,6 +33,11 @@ namespace SPSkills
                     pfc.AddFontFile($"{AppDomain.CurrentDomain.BaseDirectory}TitilliumWeb-Regular.ttf");
                     label.Font = new Font(pfc.Families[0], label.Font.Size, FontStyle.Regular);
                 }
+                if (control is PictureBox pb)
+                {
+                    pb.BackColor = Color.Transparent;
+                    pb.SizeMode = PictureBoxSizeMode.Zoom;
+                }
             }
         }
     }

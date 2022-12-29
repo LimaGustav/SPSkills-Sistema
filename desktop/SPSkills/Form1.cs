@@ -21,6 +21,9 @@ namespace SPSkills
         {
             panel1.BackgroundImage = Image.FromFile($"{AppDomain.CurrentDomain.BaseDirectory}Assets/BackGround.png");
             customPanel1.BackgroundColor = Color.FromArgb(100,0,0,0);
+
+            pictureBox3.Image = Image.FromFile($"{AppDomain.CurrentDomain.BaseDirectory}Assets/LogoSenai.png");
+            pictureBox2.Image = Image.FromFile($"{AppDomain.CurrentDomain.BaseDirectory}Assets/LogoWordSkills.png");
         }
     }
 }
