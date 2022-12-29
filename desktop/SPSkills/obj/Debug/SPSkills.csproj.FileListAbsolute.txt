@@ -22,3 +22,4 @@ C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.csproj.GenerateResource.cache
 C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.exe
 C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.pdb
+C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.CustomControls.CustomTextBox.resources

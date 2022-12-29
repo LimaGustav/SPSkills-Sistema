@@ -13,9 +13,12 @@ namespace SPSkills
 {
     public partial class parent : Form
     {
+        public string Red = "#EC1C24";
         public parent()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         private void parent_Load(object sender, EventArgs e)
