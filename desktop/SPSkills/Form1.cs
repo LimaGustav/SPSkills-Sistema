@@ -1,7 +1,10 @@
-﻿using System;
+﻿using SPSkills.Models;
+using SPSkills.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Metadata.Edm;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
@@ -32,11 +35,11 @@ namespace SPSkills
             pfc.AddFontFile($"{AppDomain.CurrentDomain.BaseDirectory}Assets\\TitilliumWeb\\TitilliumWeb-Bold.ttf");
             customButton1.Font = new Font(pfc.Families[0], customButton1.Font.Size, FontStyle.Bold);
 
-            customTextBox1.BackColor = Color.FromArgb(217, 217, 217);
-            customTextBox2.BackColor = Color.FromArgb(217, 217, 217);
-            customTextBox1.ForeColor = Color.Black;
-            customTextBox2.ForeColor = Color.Black;
-            customTextBox2.PasswordChar = true;
+            textBoxEmail.BackColor = Color.FromArgb(217, 217, 217);
+            textBoxPassword.BackColor = Color.FromArgb(217, 217, 217);
+            textBoxEmail.ForeColor = Color.Black;
+            textBoxPassword.ForeColor = Color.Black;
+            textBoxPassword.PasswordChar = true;
         }
 
         private void customButton1_MouseEnter(object sender, EventArgs e)
@@ -46,8 +49,35 @@ namespace SPSkills
 
         private void customButton1_Click(object sender, EventArgs e)
         {
-            new FrequencyPage().Show();
-            this.Hide();
+            var user = ctx.Usuarios.Where(x => x.Email == textBoxEmail.Texts).FirstOrDefault();
+            if (user == null)
+            {
+                "Email ou senha inválidos".Alert();
+                return;
+            }
+           
+
+            if (user.Senha.Length < 32)
+            {
+                user.Senha = Encript.GenerateHash(user.Senha);
+                ctx.Entry(user).CurrentValues.SetValues(user);
+                ctx.SaveChanges();
+            }
+
+            bool comparado = Encript.ComparePassword(textBoxPassword.Texts, user.Senha);
+
+
+            if (comparado)
+            {
+                new FrequencyPage().Show();
+                this.Hide();
+            }
+            else
+            {
+                "Email ou senha inválidos".Alert();
+                return;
+            }
+          
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

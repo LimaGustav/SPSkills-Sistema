@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ddbed295f4b846669bf6fa875e5581ad" Name="Diagram1">
+        <EntityTypeShape EntityType="SPSkillsModel.Competidores" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SPSkillsModel.Despesas" Width="1.5" PointX="7.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SPSkillsModel.Escola" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SPSkillsModel.Frequencias" Width="1.5" PointX="7.5" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="SPSkillsModel.Modalidades" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SPSkillsModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="SPSkillsModel.TiposDespesa" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SPSkillsModel.TiposUsuario" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SPSkillsModel.Usuarios" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <AssociationConnector Association="SPSkillsModel.FK_Competidores_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="SPSkillsModel.FK_Despesas_Competidores" ManuallyRouted="false" />
+        <AssociationConnector Association="SPSkillsModel.FK_Frequencias_Competidores" ManuallyRouted="false" />
+        <AssociationConnector Association="SPSkillsModel.FK_Despesas_TiposDespesa" ManuallyRouted="false" />
+        <AssociationConnector Association="SPSkillsModel.FK_Usuarios_Escola" ManuallyRouted="false" />
+        <AssociationConnector Association="SPSkillsModel.FK_Usuarios_Modalidades" ManuallyRouted="false" />
+        <AssociationConnector Association="SPSkillsModel.FK_Usuarios_TiposUsuario" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

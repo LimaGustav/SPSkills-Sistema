@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SPSkills.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace SPSkills
 {
     public partial class parent : Form
     {
+        public SPSkillsEntities ctx = new SPSkillsEntities();
         public string Red = "#EC1C24";
         public parent()
         {

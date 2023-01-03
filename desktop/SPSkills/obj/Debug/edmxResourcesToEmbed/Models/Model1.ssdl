@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SPSkillsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Competidores">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" />
+    <Property Name="Foto" Type="image" />
+    <Property Name="Descricao" Type="varchar" MaxLength="200" />
+    <Property Name="Nascimento" Type="date" />
+  </EntityType>
+  <EntityType Name="Despesas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTipoDespesa" Type="int" />
+    <Property Name="IdCompetidor" Type="int" />
+    <Property Name="Valor" Type="int" />
+    <Property Name="Data" Type="date" />
+  </EntityType>
+  <EntityType Name="Escola">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Latitude" Type="float" />
+    <Property Name="Logitude" Type="float" />
+  </EntityType>
+  <EntityType Name="Frequencias">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCompetidor" Type="int" />
+    <Property Name="HoraEntrada" Type="datetime" />
+    <Property Name="HoraSaida" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Modalidades">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+    <Property Name="Descricao" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TiposDespesa">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TiposUsuario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTipoUsuario" Type="int" />
+    <Property Name="IdEscola" Type="int" />
+    <Property Name="IdModalidade" Type="int" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+    <Property Name="Cpf" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Senha" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_Competidores_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Competidores" Type="Self.Competidores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Competidores">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Despesas_Competidores">
+    <End Role="Competidores" Type="Self.Competidores" Multiplicity="0..1" />
+    <End Role="Despesas" Type="Self.Despesas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Competidores">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Despesas">
+        <PropertyRef Name="IdCompetidor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Despesas_TiposDespesa">
+    <End Role="TiposDespesa" Type="Self.TiposDespesa" Multiplicity="0..1" />
+    <End Role="Despesas" Type="Self.Despesas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TiposDespesa">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Despesas">
+        <PropertyRef Name="IdTipoDespesa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Frequencias_Competidores">
+    <End Role="Competidores" Type="Self.Competidores" Multiplicity="0..1" />
+    <End Role="Frequencias" Type="Self.Frequencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Competidores">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Frequencias">
+        <PropertyRef Name="IdCompetidor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Escola">
+    <End Role="Escola" Type="Self.Escola" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escola">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="IdEscola" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Modalidades">
+    <End Role="Modalidades" Type="Self.Modalidades" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modalidades">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="IdModalidade" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_TiposUsuario">
+    <End Role="TiposUsuario" Type="Self.TiposUsuario" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TiposUsuario">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="IdTipoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SPSkillsModelStoreContainer">
+    <EntitySet Name="Competidores" EntityType="Self.Competidores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Despesas" EntityType="Self.Despesas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Escola" EntityType="Self.Escola" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Frequencias" EntityType="Self.Frequencias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Modalidades" EntityType="Self.Modalidades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TiposDespesa" EntityType="Self.TiposDespesa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TiposUsuario" EntityType="Self.TiposUsuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Competidores_Usuarios" Association="Self.FK_Competidores_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Competidores" EntitySet="Competidores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Despesas_Competidores" Association="Self.FK_Despesas_Competidores">
+      <End Role="Competidores" EntitySet="Competidores" />
+      <End Role="Despesas" EntitySet="Despesas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Despesas_TiposDespesa" Association="Self.FK_Despesas_TiposDespesa">
+      <End Role="TiposDespesa" EntitySet="TiposDespesa" />
+      <End Role="Despesas" EntitySet="Despesas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Frequencias_Competidores" Association="Self.FK_Frequencias_Competidores">
+      <End Role="Competidores" EntitySet="Competidores" />
+      <End Role="Frequencias" EntitySet="Frequencias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Escola" Association="Self.FK_Usuarios_Escola">
+      <End Role="Escola" EntitySet="Escola" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Modalidades" Association="Self.FK_Usuarios_Modalidades">
+      <End Role="Modalidades" EntitySet="Modalidades" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_TiposUsuario" Association="Self.FK_Usuarios_TiposUsuario">
+      <End Role="TiposUsuario" EntitySet="TiposUsuario" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

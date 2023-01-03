@@ -32,8 +32,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.customPanel1 = new SPSkills.CustomControls.CustomPanel();
-            this.customTextBox2 = new SPSkills.CustomControls.CustomTextBox();
-            this.customTextBox1 = new SPSkills.CustomControls.CustomTextBox();
+            this.textBoxPassword = new SPSkills.CustomControls.CustomTextBox();
+            this.textBoxEmail = new SPSkills.CustomControls.CustomTextBox();
             this.customButton1 = new SPSkills.CustomControls.CustomButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,8 +80,8 @@
             this.customPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.customPanel1.BorderRadius = 20;
             this.customPanel1.BorderSize = 0;
-            this.customPanel1.Controls.Add(this.customTextBox2);
-            this.customPanel1.Controls.Add(this.customTextBox1);
+            this.customPanel1.Controls.Add(this.textBoxPassword);
+            this.customPanel1.Controls.Add(this.textBoxEmail);
             this.customPanel1.Controls.Add(this.customButton1);
             this.customPanel1.Controls.Add(this.label3);
             this.customPanel1.Controls.Add(this.label2);
@@ -92,47 +92,47 @@
             this.customPanel1.Size = new System.Drawing.Size(726, 457);
             this.customPanel1.TabIndex = 2;
             // 
-            // customTextBox2
+            // textBoxPassword
             // 
-            this.customTextBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.customTextBox2.BorderColor = System.Drawing.Color.White;
-            this.customTextBox2.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.customTextBox2.BorderRadius = 8;
-            this.customTextBox2.BorderSize = 1;
-            this.customTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox2.Location = new System.Drawing.Point(112, 256);
-            this.customTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox2.Multiline = false;
-            this.customTextBox2.Name = "customTextBox2";
-            this.customTextBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.customTextBox2.PasswordChar = false;
-            this.customTextBox2.PlaceholderColor = System.Drawing.Color.White;
-            this.customTextBox2.PlaceholderText = "Digite aqui sua Senha:";
-            this.customTextBox2.Size = new System.Drawing.Size(505, 31);
-            this.customTextBox2.TabIndex = 3;
-            this.customTextBox2.Texts = "";
-            this.customTextBox2.UnderlinedStyle = false;
+            this.textBoxPassword.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxPassword.BorderColor = System.Drawing.Color.White;
+            this.textBoxPassword.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.textBoxPassword.BorderRadius = 8;
+            this.textBoxPassword.BorderSize = 1;
+            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassword.Location = new System.Drawing.Point(112, 256);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxPassword.Multiline = false;
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxPassword.PasswordChar = false;
+            this.textBoxPassword.PlaceholderColor = System.Drawing.Color.White;
+            this.textBoxPassword.PlaceholderText = "Digite aqui sua Senha:";
+            this.textBoxPassword.Size = new System.Drawing.Size(505, 31);
+            this.textBoxPassword.TabIndex = 3;
+            this.textBoxPassword.Texts = "";
+            this.textBoxPassword.UnderlinedStyle = false;
             // 
-            // customTextBox1
+            // textBoxEmail
             // 
-            this.customTextBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.customTextBox1.BorderColor = System.Drawing.Color.White;
-            this.customTextBox1.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.customTextBox1.BorderRadius = 8;
-            this.customTextBox1.BorderSize = 1;
-            this.customTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox1.Location = new System.Drawing.Point(112, 145);
-            this.customTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox1.Multiline = false;
-            this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.customTextBox1.PasswordChar = false;
-            this.customTextBox1.PlaceholderColor = System.Drawing.Color.White;
-            this.customTextBox1.PlaceholderText = "Digite aqui seu Email:";
-            this.customTextBox1.Size = new System.Drawing.Size(505, 31);
-            this.customTextBox1.TabIndex = 3;
-            this.customTextBox1.Texts = "";
-            this.customTextBox1.UnderlinedStyle = true;
+            this.textBoxEmail.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxEmail.BorderColor = System.Drawing.Color.White;
+            this.textBoxEmail.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.textBoxEmail.BorderRadius = 8;
+            this.textBoxEmail.BorderSize = 1;
+            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Location = new System.Drawing.Point(112, 145);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxEmail.Multiline = false;
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxEmail.PasswordChar = false;
+            this.textBoxEmail.PlaceholderColor = System.Drawing.Color.White;
+            this.textBoxEmail.PlaceholderText = "Digite aqui seu Email:";
+            this.textBoxEmail.Size = new System.Drawing.Size(505, 31);
+            this.textBoxEmail.TabIndex = 3;
+            this.textBoxEmail.Texts = "";
+            this.textBoxEmail.UnderlinedStyle = true;
             // 
             // customButton1
             // 
@@ -240,8 +240,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private CustomControls.CustomButton customButton1;
-        private CustomControls.CustomTextBox customTextBox2;
-        private CustomControls.CustomTextBox customTextBox1;
+        private CustomControls.CustomTextBox textBoxPassword;
+        private CustomControls.CustomTextBox textBoxEmail;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
