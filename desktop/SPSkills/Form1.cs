@@ -46,7 +46,8 @@ namespace SPSkills
 
         private void customButton1_Click(object sender, EventArgs e)
         {
-            new teste().Show();
+            new FrequencyPage().Show();
+            this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

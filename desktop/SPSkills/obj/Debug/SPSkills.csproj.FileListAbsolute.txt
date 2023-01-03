@@ -23,3 +23,5 @@ C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.csproj.CoreCompileInputs.cach
 C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.exe
 C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.pdb
 C:\Users\admin\Desktop\SPSkills\obj\Debug\SPSkills.CustomControls.CustomTextBox.resources
+C:\SistemaSkills\desktop\SPSkills\obj\Debug\SPSkills.CustomControls.CustomTextBox.resources
+C:\SistemaSkills\desktop\SPSkills\obj\Debug\SPSkills.FrequencyPage.resources

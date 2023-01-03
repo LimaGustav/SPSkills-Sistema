@@ -1,6 +1,6 @@
 ﻿namespace SPSkills
 {
-    partial class teste
+    partial class FrequencyPage
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Size = new System.Drawing.Size(1395, 866);
+            // 
+            // FrequencyPage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "teste";
+            this.ClientSize = new System.Drawing.Size(1395, 866);
+            this.Name = "FrequencyPage";
+            this.Text = "FrequencyPage";
+            this.Load += new System.EventHandler(this.FrequencyPage_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
