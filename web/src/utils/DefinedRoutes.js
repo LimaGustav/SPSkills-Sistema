@@ -1,4 +1,5 @@
 import Competitors from "../pages/competitors/Competitors";
+import Expenses from "../pages/expenses/Expenses";
 import ForgotPassword from "../pages/login/ForgotPassword";
 import Login from "../pages/login/Login";
 import NewPassword from "../pages/login/NewPassword";
@@ -27,7 +28,7 @@ const DefinedRoutes =  {
   },
   expenses: {
     path: '/despesas',
-    element: <Competitors />
+    element: <Expenses />
   },
   profile: {
     path: '/perfil',

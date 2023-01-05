@@ -52,8 +52,23 @@ input[type=text] {
     color: $white;
     margin-bottom: 30px;
 }
+select, input[type=number] {
+    width: 22%;
+    height: 40px;
+    background: linear-gradient(139.45deg, rgba(239, 239, 239, 0.6) 0%, rgba(217, 217, 217, 0.1) 100%);
+    backdrop-filter: blur(6px);
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 0 20px;
+    color: $white;
+    margin-bottom: 30px;
+}
 
-input[type=text]::placeholder{
+option{
+    color: $black;
+}
+
+input[type=text]::placeholder, input[type=number]::placeholder{
     color: $white
 }
 
