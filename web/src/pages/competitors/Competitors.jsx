@@ -43,12 +43,12 @@ export default function Competitors() {
         <Header />
 
         <main className="full2 d-flex flex-column container">
-            <h1>Competidores</h1>
+            <h1 className="fs-1">Competidores</h1>
             
             <input type="text" placeholder="Pesquisar competidor..." onChange={e => setSearch(e.target.value)} value={search}/>
             <div className="lazyload w-100 main" style={{'--height': '100%'}}>
                 <div className="lazyinner d-flex justify-content-between flex-wrap">
-                    {competitors.filter(x => x.name.split(' ').filter(y => !y.includes(search)).length === 0).map(x => <CompetitorComponent competitor={x} key={x.id} />)}
+                    {competitors.filter(x => x.name.split(' ').filter(y => !y.toUpperCase().includes(search.toUpperCase())).length === 0).map(x => <CompetitorComponent competitor={x} key={x.id} />)}
                 </div>
             </div>
         </main>

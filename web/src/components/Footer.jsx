@@ -6,8 +6,8 @@ export default function Footer(){
 
     return <footer className='footer d-flex align-items-center'>
         <div className="container d-flex justify-content-around align-items-center">
-            <img src={logoWorldSkills} alt="Logo da World Skills" />
-            <img src={logoSenai} alt="Logo do SENAI" />
+            <img className='mw-50' src={logoWorldSkills} alt="Logo da World Skills" />
+            <img className='mw-50' src={logoSenai} alt="Logo do SENAI" />
         </div>
     </footer>
 }
