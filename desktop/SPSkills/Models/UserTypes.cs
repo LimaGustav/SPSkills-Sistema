@@ -12,19 +12,18 @@ namespace SPSkills.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Escola
+    public partial class UserTypes
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Escola()
+        public UserTypes()
         {
-            this.Usuarios = new HashSet<Usuarios>();
+            this.Users = new HashSet<Users>();
         }
     
         public int Id { get; set; }
-        public Nullable<double> Latitude { get; set; }
-        public Nullable<double> Logitude { get; set; }
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Usuarios> Usuarios { get; set; }
+        public virtual ICollection<Users> Users { get; set; }
     }
 }

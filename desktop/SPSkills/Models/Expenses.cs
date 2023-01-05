@@ -12,13 +12,15 @@ namespace SPSkills.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Frequencias
+    public partial class Expenses
     {
         public int Id { get; set; }
-        public Nullable<int> IdCompetidor { get; set; }
-        public Nullable<System.DateTime> HoraEntrada { get; set; }
-        public Nullable<System.DateTime> HoraSaida { get; set; }
+        public Nullable<int> IdExpenseType { get; set; }
+        public Nullable<int> IdCompetitor { get; set; }
+        public Nullable<int> Value { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
     
-        public virtual Competidores Competidores { get; set; }
+        public virtual Competitors Competitors { get; set; }
+        public virtual ExpenseTypes ExpenseTypes { get; set; }
     }
 }

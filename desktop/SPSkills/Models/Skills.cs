@@ -12,19 +12,19 @@ namespace SPSkills.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Modalidades
+    public partial class Skills
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Modalidades()
+        public Skills()
         {
-            this.Usuarios = new HashSet<Usuarios>();
+            this.Users = new HashSet<Users>();
         }
     
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Descricao { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Usuarios> Usuarios { get; set; }
+        public virtual ICollection<Users> Users { get; set; }
     }
 }

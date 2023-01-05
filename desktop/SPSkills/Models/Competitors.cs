@@ -12,18 +12,25 @@ namespace SPSkills.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TiposUsuario
+    public partial class Competitors
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TiposUsuario()
+        public Competitors()
         {
-            this.Usuarios = new HashSet<Usuarios>();
+            this.Expenses = new HashSet<Expenses>();
+            this.Frequency = new HashSet<Frequency>();
         }
     
         public int Id { get; set; }
-        public string Nome { get; set; }
+        public Nullable<int> IdUser { get; set; }
+        public byte[] Image { get; set; }
+        public string Description { get; set; }
+        public Nullable<System.DateTime> Birthday { get; set; }
     
+        public virtual Users Users { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Usuarios> Usuarios { get; set; }
+        public virtual ICollection<Expenses> Expenses { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Frequency> Frequency { get; set; }
     }
 }

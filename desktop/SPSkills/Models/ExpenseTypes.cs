@@ -12,15 +12,18 @@ namespace SPSkills.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Despesas
+    public partial class ExpenseTypes
     {
-        public int Id { get; set; }
-        public Nullable<int> IdTipoDespesa { get; set; }
-        public Nullable<int> IdCompetidor { get; set; }
-        public Nullable<int> Valor { get; set; }
-        public Nullable<System.DateTime> Data { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ExpenseTypes()
+        {
+            this.Expenses = new HashSet<Expenses>();
+        }
     
-        public virtual Competidores Competidores { get; set; }
-        public virtual TiposDespesa TiposDespesa { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Expenses> Expenses { get; set; }
     }
 }

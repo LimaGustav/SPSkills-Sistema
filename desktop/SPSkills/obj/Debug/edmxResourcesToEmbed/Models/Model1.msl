@@ -1,53 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="SPSkillsModelStoreContainer" CdmEntityContainer="SPSkillsEntities">
-    <EntitySetMapping Name="Competidores">
-      <EntityTypeMapping TypeName="SPSkillsModel.Competidores">
-        <MappingFragment StoreEntitySet="Competidores">
+    <EntitySetMapping Name="Competitors">
+      <EntityTypeMapping TypeName="SPSkillsModel.Competitors">
+        <MappingFragment StoreEntitySet="Competitors">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
-          <ScalarProperty Name="Foto" ColumnName="Foto" />
-          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
-          <ScalarProperty Name="Nascimento" ColumnName="Nascimento" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Despesas">
-      <EntityTypeMapping TypeName="SPSkillsModel.Despesas">
-        <MappingFragment StoreEntitySet="Despesas">
+    <EntitySetMapping Name="Expenses">
+      <EntityTypeMapping TypeName="SPSkillsModel.Expenses">
+        <MappingFragment StoreEntitySet="Expenses">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="IdTipoDespesa" ColumnName="IdTipoDespesa" />
-          <ScalarProperty Name="IdCompetidor" ColumnName="IdCompetidor" />
-          <ScalarProperty Name="Valor" ColumnName="Valor" />
-          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IdExpenseType" ColumnName="IdExpenseType" />
+          <ScalarProperty Name="IdCompetitor" ColumnName="IdCompetitor" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Escola">
-      <EntityTypeMapping TypeName="SPSkillsModel.Escola">
-        <MappingFragment StoreEntitySet="Escola">
+    <EntitySetMapping Name="ExpenseTypes">
+      <EntityTypeMapping TypeName="SPSkillsModel.ExpenseTypes">
+        <MappingFragment StoreEntitySet="ExpenseTypes">
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Frequency">
+      <EntityTypeMapping TypeName="SPSkillsModel.Frequency">
+        <MappingFragment StoreEntitySet="Frequency">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdCompetitor" ColumnName="IdCompetitor" />
+          <ScalarProperty Name="CheckIn" ColumnName="CheckIn" />
+          <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schools">
+      <EntityTypeMapping TypeName="SPSkillsModel.Schools">
+        <MappingFragment StoreEntitySet="Schools">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Latitude" ColumnName="Latitude" />
           <ScalarProperty Name="Logitude" ColumnName="Logitude" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Frequencias">
-      <EntityTypeMapping TypeName="SPSkillsModel.Frequencias">
-        <MappingFragment StoreEntitySet="Frequencias">
+    <EntitySetMapping Name="Skills">
+      <EntityTypeMapping TypeName="SPSkillsModel.Skills">
+        <MappingFragment StoreEntitySet="Skills">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="IdCompetidor" ColumnName="IdCompetidor" />
-          <ScalarProperty Name="HoraEntrada" ColumnName="HoraEntrada" />
-          <ScalarProperty Name="HoraSaida" ColumnName="HoraSaida" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Modalidades">
-      <EntityTypeMapping TypeName="SPSkillsModel.Modalidades">
-        <MappingFragment StoreEntitySet="Modalidades">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Nome" ColumnName="Nome" />
-          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -62,33 +71,26 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TiposDespesa">
-      <EntityTypeMapping TypeName="SPSkillsModel.TiposDespesa">
-        <MappingFragment StoreEntitySet="TiposDespesa">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="SPSkillsModel.Users">
+        <MappingFragment StoreEntitySet="Users">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Nome" ColumnName="Nome" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TiposUsuario">
-      <EntityTypeMapping TypeName="SPSkillsModel.TiposUsuario">
-        <MappingFragment StoreEntitySet="TiposUsuario">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Nome" ColumnName="Nome" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Usuarios">
-      <EntityTypeMapping TypeName="SPSkillsModel.Usuarios">
-        <MappingFragment StoreEntitySet="Usuarios">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="IdTipoUsuario" ColumnName="IdTipoUsuario" />
-          <ScalarProperty Name="IdEscola" ColumnName="IdEscola" />
-          <ScalarProperty Name="IdModalidade" ColumnName="IdModalidade" />
-          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IdUserType" ColumnName="IdUserType" />
+          <ScalarProperty Name="IdSchool" ColumnName="IdSchool" />
+          <ScalarProperty Name="IdSkill" ColumnName="IdSkill" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Cpf" ColumnName="Cpf" />
           <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTypes">
+      <EntityTypeMapping TypeName="SPSkillsModel.UserTypes">
+        <MappingFragment StoreEntitySet="UserTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

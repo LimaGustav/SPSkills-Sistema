@@ -25,14 +25,14 @@ namespace SPSkills.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Competidores> Competidores { get; set; }
-        public virtual DbSet<Despesas> Despesas { get; set; }
-        public virtual DbSet<Escola> Escola { get; set; }
-        public virtual DbSet<Frequencias> Frequencias { get; set; }
-        public virtual DbSet<Modalidades> Modalidades { get; set; }
+        public virtual DbSet<Competitors> Competitors { get; set; }
+        public virtual DbSet<Expenses> Expenses { get; set; }
+        public virtual DbSet<ExpenseTypes> ExpenseTypes { get; set; }
+        public virtual DbSet<Frequency> Frequency { get; set; }
+        public virtual DbSet<Schools> Schools { get; set; }
+        public virtual DbSet<Skills> Skills { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<TiposDespesa> TiposDespesa { get; set; }
-        public virtual DbSet<TiposUsuario> TiposUsuario { get; set; }
-        public virtual DbSet<Usuarios> Usuarios { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<UserTypes> UserTypes { get; set; }
     }
 }

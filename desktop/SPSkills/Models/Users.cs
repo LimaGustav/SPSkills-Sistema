@@ -12,27 +12,28 @@ namespace SPSkills.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Usuarios
+    public partial class Users
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Usuarios()
+        public Users()
         {
-            this.Competidores = new HashSet<Competidores>();
+            this.Competitors = new HashSet<Competitors>();
         }
     
         public int Id { get; set; }
-        public Nullable<int> IdTipoUsuario { get; set; }
-        public Nullable<int> IdEscola { get; set; }
-        public Nullable<int> IdModalidade { get; set; }
-        public string Nome { get; set; }
+        public int IdUserType { get; set; }
+        public Nullable<int> IdSchool { get; set; }
+        public Nullable<int> IdSkill { get; set; }
+        public string Name { get; set; }
         public string Cpf { get; set; }
         public string Email { get; set; }
-        public string Senha { get; set; }
+        public string Password { get; set; }
+        public string DeviceId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Competidores> Competidores { get; set; }
-        public virtual Escola Escola { get; set; }
-        public virtual Modalidades Modalidades { get; set; }
-        public virtual TiposUsuario TiposUsuario { get; set; }
+        public virtual ICollection<Competitors> Competitors { get; set; }
+        public virtual Schools Schools { get; set; }
+        public virtual Skills Skills { get; set; }
+        public virtual UserTypes UserTypes { get; set; }
     }
 }

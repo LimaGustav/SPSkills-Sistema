@@ -49,7 +49,7 @@ namespace SPSkills
 
         private void customButton1_Click(object sender, EventArgs e)
         {
-            var user = ctx.Usuarios.Where(x => x.Email == textBoxEmail.Texts).FirstOrDefault();
+            var user = ctx.Users.Where(x => x.Email == textBoxEmail.Texts).FirstOrDefault();
             if (user == null)
             {
                 "Email ou senha inválidos".Alert();
@@ -57,14 +57,14 @@ namespace SPSkills
             }
            
 
-            if (user.Senha.Length < 32)
+            if (user.Password.Length < 32)
             {
-                user.Senha = Encript.GenerateHash(user.Senha);
+                user.Password = Encript.GenerateHash(user.Password);
                 ctx.Entry(user).CurrentValues.SetValues(user);
                 ctx.SaveChanges();
             }
 
-            bool comparado = Encript.ComparePassword(textBoxPassword.Texts, user.Senha);
+            bool comparado = Encript.ComparePassword(textBoxPassword.Texts, user.Password);
 
 
             if (comparado)
