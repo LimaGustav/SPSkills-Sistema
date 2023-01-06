@@ -15,6 +15,7 @@ namespace SPSkills
     public partial class parent : Form
     {
         public SPSkillsEntities ctx = new SPSkillsEntities();
+        protected Users userLogado = new Users();
         public string Red = "#EC1C24";
         public parent()
         {

@@ -38,6 +38,7 @@
           <ScalarProperty Name="IdCompetitor" ColumnName="IdCompetitor" />
           <ScalarProperty Name="CheckIn" ColumnName="CheckIn" />
           <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

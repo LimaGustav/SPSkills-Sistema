@@ -15,9 +15,10 @@ namespace SPSkills.Models
     public partial class Frequency
     {
         public int Id { get; set; }
-        public Nullable<int> IdCompetitor { get; set; }
-        public Nullable<System.DateTime> CheckIn { get; set; }
-        public Nullable<System.DateTime> CheckOut { get; set; }
+        public int IdCompetitor { get; set; }
+        public System.DateTime CheckIn { get; set; }
+        public System.DateTime CheckOut { get; set; }
+        public string Descricao { get; set; }
     
         public virtual Competitors Competitors { get; set; }
     }

@@ -22,7 +22,7 @@ namespace SPSkills.Models
         }
     
         public int Id { get; set; }
-        public Nullable<int> IdUser { get; set; }
+        public int IdUser { get; set; }
         public byte[] Image { get; set; }
         public string Description { get; set; }
         public Nullable<System.DateTime> Birthday { get; set; }

@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="68b687ce7672437daf95c10b22fef827" Name="Diagram1">
+      <Diagram DiagramId="ce9e09be8ae84fab9ae69c169dd4f13b" Name="Diagram1">
         <EntityTypeShape EntityType="SPSkillsModel.Competitors" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SPSkillsModel.Expenses" Width="1.5" PointX="7.5" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SPSkillsModel.ExpenseTypes" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="SPSkillsModel.Frequency" Width="1.5" PointX="7.5" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="SPSkillsModel.Frequency" Width="1.5" PointX="7.5" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SPSkillsModel.Schools" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SPSkillsModel.Skills" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SPSkillsModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="SPSkillsModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="7.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SPSkillsModel.Users" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="SPSkillsModel.UserTypes" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
         <AssociationConnector Association="SPSkillsModel.FK_Competidores_Usuarios" ManuallyRouted="false" />

@@ -15,10 +15,10 @@ namespace SPSkills.Models
     public partial class Expenses
     {
         public int Id { get; set; }
-        public Nullable<int> IdExpenseType { get; set; }
-        public Nullable<int> IdCompetitor { get; set; }
-        public Nullable<int> Value { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
+        public int IdExpenseType { get; set; }
+        public int IdCompetitor { get; set; }
+        public int Value { get; set; }
+        public System.DateTime Date { get; set; }
     
         public virtual Competitors Competitors { get; set; }
         public virtual ExpenseTypes ExpenseTypes { get; set; }

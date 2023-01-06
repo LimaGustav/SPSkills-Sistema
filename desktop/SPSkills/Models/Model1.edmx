@@ -10,7 +10,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IdUser" Type="int" />
+          <Property Name="IdUser" Type="int" Nullable="false" />
           <Property Name="Image" Type="image" />
           <Property Name="Description" Type="varchar" MaxLength="200" />
           <Property Name="Birthday" Type="date" />
@@ -20,26 +20,27 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IdExpenseType" Type="int" />
-          <Property Name="IdCompetitor" Type="int" />
-          <Property Name="Value" Type="int" />
-          <Property Name="Date" Type="date" />
+          <Property Name="IdExpenseType" Type="int" Nullable="false" />
+          <Property Name="IdCompetitor" Type="int" Nullable="false" />
+          <Property Name="Value" Type="int" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="ExpenseTypes">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Frequency">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IdCompetitor" Type="int" />
-          <Property Name="CheckIn" Type="datetime" />
-          <Property Name="CheckOut" Type="datetime" />
+          <Property Name="IdCompetitor" Type="int" Nullable="false" />
+          <Property Name="CheckIn" Type="datetime" Nullable="false" />
+          <Property Name="CheckOut" Type="datetime" Nullable="false" />
+          <Property Name="Descricao" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Schools">
           <Key>
@@ -90,7 +91,7 @@
           <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <Association Name="FK_Competidores_Usuarios">
-          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Competitors" Type="Self.Competitors" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Users">
@@ -102,7 +103,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Despesas_Competidores">
-          <End Role="Competitors" Type="Self.Competitors" Multiplicity="0..1" />
+          <End Role="Competitors" Type="Self.Competitors" Multiplicity="1" />
           <End Role="Expenses" Type="Self.Expenses" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Competitors">
@@ -114,7 +115,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Despesas_TiposDespesa">
-          <End Role="ExpenseTypes" Type="Self.ExpenseTypes" Multiplicity="0..1" />
+          <End Role="ExpenseTypes" Type="Self.ExpenseTypes" Multiplicity="1" />
           <End Role="Expenses" Type="Self.Expenses" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ExpenseTypes">
@@ -126,7 +127,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Frequencias_Competidores">
-          <End Role="Competitors" Type="Self.Competitors" Multiplicity="0..1" />
+          <End Role="Competitors" Type="Self.Competitors" Multiplicity="1" />
           <End Role="Frequency" Type="Self.Frequency" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Competitors">
@@ -222,7 +223,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IdUser" Type="Int32" />
+          <Property Name="IdUser" Type="Int32" Nullable="false" />
           <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Birthday" Type="DateTime" Precision="0" />
@@ -235,10 +236,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IdExpenseType" Type="Int32" />
-          <Property Name="IdCompetitor" Type="Int32" />
-          <Property Name="Value" Type="Int32" />
-          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="IdExpenseType" Type="Int32" Nullable="false" />
+          <Property Name="IdCompetitor" Type="Int32" Nullable="false" />
+          <Property Name="Value" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="Competitors" Relationship="Self.FK_Despesas_Competidores" FromRole="Expenses" ToRole="Competitors" />
           <NavigationProperty Name="ExpenseTypes" Relationship="Self.FK_Despesas_TiposDespesa" FromRole="Expenses" ToRole="ExpenseTypes" />
         </EntityType>
@@ -247,7 +248,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Expenses" Relationship="Self.FK_Despesas_TiposDespesa" FromRole="ExpenseTypes" ToRole="Expenses" />
         </EntityType>
         <EntityType Name="Frequency">
@@ -255,9 +256,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IdCompetitor" Type="Int32" />
-          <Property Name="CheckIn" Type="DateTime" Precision="3" />
-          <Property Name="CheckOut" Type="DateTime" Precision="3" />
+          <Property Name="IdCompetitor" Type="Int32" Nullable="false" />
+          <Property Name="CheckIn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CheckOut" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Descricao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Competitors" Relationship="Self.FK_Frequencias_Competidores" FromRole="Frequency" ToRole="Competitors" />
         </EntityType>
         <EntityType Name="Schools">
@@ -316,7 +318,7 @@
           <NavigationProperty Name="Users" Relationship="Self.FK_Usuarios_TiposUsuario" FromRole="UserTypes" ToRole="Users" />
         </EntityType>
         <Association Name="FK_Competidores_Usuarios">
-          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Competitors" Type="Self.Competitors" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Users">
@@ -328,7 +330,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Despesas_Competidores">
-          <End Role="Competitors" Type="Self.Competitors" Multiplicity="0..1" />
+          <End Role="Competitors" Type="Self.Competitors" Multiplicity="1" />
           <End Role="Expenses" Type="Self.Expenses" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Competitors">
@@ -340,7 +342,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Frequencias_Competidores">
-          <End Role="Competitors" Type="Self.Competitors" Multiplicity="0..1" />
+          <End Role="Competitors" Type="Self.Competitors" Multiplicity="1" />
           <End Role="Frequency" Type="Self.Frequency" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Competitors">
@@ -352,7 +354,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Despesas_TiposDespesa">
-          <End Role="ExpenseTypes" Type="Self.ExpenseTypes" Multiplicity="0..1" />
+          <End Role="ExpenseTypes" Type="Self.ExpenseTypes" Multiplicity="1" />
           <End Role="Expenses" Type="Self.Expenses" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ExpenseTypes">
@@ -481,6 +483,7 @@
                 <ScalarProperty Name="IdCompetitor" ColumnName="IdCompetitor" />
                 <ScalarProperty Name="CheckIn" ColumnName="CheckIn" />
                 <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
